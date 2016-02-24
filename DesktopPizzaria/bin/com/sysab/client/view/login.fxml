@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="678.0" style="-fx-background-color: #2E8B57;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sysab.client.controller.ValidationController">
+   <children>
+      <Label fx:id="lblSysab" prefHeight="78.0" prefWidth="382.0" text="Sysab Systems" textAlignment="CENTER" textFill="GAINSBORO" textOverrun="CLIP" underline="true" wrapText="true">
+         <font>
+            <Font name="Script MT Bold" size="64.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="145.0" />
+         </VBox.margin>
+      </Label>
+      <Pane prefHeight="163.0" prefWidth="678.0" style="-fx-background-color: #FFFFFF;">
+         <VBox.margin>
+            <Insets top="30.0" />
+         </VBox.margin>
+         <children>
+            <Label fx:id="lblEmail" layoutX="36.0" layoutY="36.0" text="Email">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblSenha" layoutX="33.0" layoutY="88.0" text="Senha">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLogin" layoutX="574.0" layoutY="82.0" mnemonicParsing="false" onAction="#realizeTheValidation" prefHeight="64.0" prefWidth="80.0" text="Login">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="passSenha" layoutX="91.0" layoutY="83.0" prefHeight="25.0" prefWidth="466.0" promptText="Digite sua senha...">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </PasswordField>
+            <ComboBox fx:id="comboEmail" layoutX="103.0" layoutY="33.0" prefHeight="37.0" prefWidth="452.0" style="-fx-font-size: 16;" />
+         </children>
+      </Pane>
+   </children>
+</VBox>

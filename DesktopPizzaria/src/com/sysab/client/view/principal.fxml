@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="744.0" prefWidth="1452.0" style="-fx-background-color: #A9A9A9; -fx-background-size: 1600 900;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sysab.client.controller.PrincipalController">
+   <children>
+      <HBox prefHeight="38.0" prefWidth="930.0" style="-fx-background-color: #2E8B57;" />
+      <MenuBar prefHeight="32.0" prefWidth="930.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Cadastrar">
+            <items>
+              <MenuItem fx:id="cadastroCliente" mnemonicParsing="false" onAction="#redirecionaParaTelaDeCadastro" text="Cadastrar cliente" />
+                  <MenuItem fx:id="cadastroPedido" mnemonicParsing="false" text="Cadastrar pedido" />
+                  <MenuItem fx:id="cadastroSabor" mnemonicParsing="false" text="Cadastrar sabor" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Editar">
+            <items>
+              <MenuItem fx:id="editaCliente" mnemonicParsing="false" text="Editar cadastro de cliente" />
+                  <MenuItem fx:id="editaPedido" mnemonicParsing="false" text="Editar pedido" />
+                  <MenuItem fx:id="excluiCadastro" mnemonicParsing="false" text="Excluir cadastro" />
+                  <MenuItem fx:id="excluiPedido" mnemonicParsing="false" text="Excluir pedido" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Buscar">
+            <items>
+              <MenuItem fx:id="buscaCliente" mnemonicParsing="false" text="Buscar cliente" />
+                  <MenuItem fx:id="buscaPedido" mnemonicParsing="false" text="Buscar pedido" />
+                  <MenuItem fx:id="buscaSabor" mnemonicParsing="false" text="Buscar sabor" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Pendente">
+              <items>
+                <MenuItem fx:id="pedidoPendente" mnemonicParsing="false" text="Pedidos pendentes" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ferramenta do Administrador">
+              <items>
+                <MenuItem fx:id="cadastroUsuario" mnemonicParsing="false" text="Cadastrar usuário" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Promoções">
+              <items>
+                <MenuItem fx:id="newPromo" mnemonicParsing="false" text="Nova promoção" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Sobre o Desenvolvedor">
+              <items>
+                <MenuItem fx:id="info" mnemonicParsing="false" text="Info" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Logoff">
+              <items>
+                <MenuItem fx:id="logoff" mnemonicParsing="false" onAction="#efetuaLogoff" text="Fazer logoff" />
+                  <MenuItem fx:id="exitSystem" mnemonicParsing="false" onAction="#encerraSistema" text="Encerrar sistema" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</VBox>

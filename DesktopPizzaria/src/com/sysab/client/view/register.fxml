@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="545.0" prefWidth="1189.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sysab.client.controller.RegisterController">
+   <children>
+      <HBox prefHeight="94.0" prefWidth="1189.0" style="-fx-background-color: #2E8B57;" />
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="50.0" prefWidth="375.0">
+         <children>
+            <Label fx:id="lblCadastro" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="58.0" prefWidth="374.0" text="Cadastro de Clientes">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <Pane prefHeight="496.0" prefWidth="1196.0" style="-fx-border-color: #808080;">
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" />
+         </VBox.margin>
+         <children>
+            <Pane layoutX="14.0" layoutY="14.0" prefHeight="44.0" prefWidth="180.0" style="-fx-border-color: #808080;">
+               <children>
+                  <CheckBox fx:id="checkPessoaFisica" selected="true" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#verifyFieldsPrimaryOfPessoa" text="Física" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="checkPessoaJuridica" layoutX="100.0" layoutY="14.0" mnemonicParsing="false" onAction="#verifyFieldsSecondaryOfPessoa" text="Jurídica" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </Pane>
+            <Pane layoutX="221.0" layoutY="14.0" prefHeight="50.0" prefWidth="1004.0">
+               <children>
+                  <Label fx:id="lblNome" layoutY="15.0" text="Nome Completo">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <WordTextField fx:id="txtNome" disable="false" layoutX="113.0" layoutY="13.0" prefHeight="25.0" prefWidth="425.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </WordTextField>
+                  <Label fx:id="lblCpf" layoutX="557.0" layoutY="16.0" text="C.P.F">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <NumberTextField fx:id="txtCpf" disable="false" layoutX="596.0" layoutY="14.0" prefHeight="25.0" prefWidth="128.0" promptText="___.___.___-__">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </NumberTextField>
+                  <Label fx:id="lblRg" layoutX="764.0" layoutY="19.0" text="R.G">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <NumberTextField fx:id="txtRg" disable="false" layoutX="800.0" layoutY="13.0" prefHeight="25.0" prefWidth="109.0" promptText="__.___.___-_">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </NumberTextField>
+               </children>
+            </Pane>
+            <Pane layoutX="14.0" layoutY="64.0" prefHeight="387.0" prefWidth="1163.0">
+               <children>
+                  <Label fx:id="lblRazaoSocial" layoutX="14.0" layoutY="14.0" text="Razão Social">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtRazaoSocial" disable="true" layoutX="106.0" layoutY="13.0" prefHeight="30.0" prefWidth="394.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lblFantasia" layoutX="531.0" layoutY="18.0" text="Fantasia">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFantasia" disable="true" layoutX="762.0" layoutY="12.0" prefHeight="30.0" prefWidth="355.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Pane layoutX="599.0" layoutY="14.0" prefHeight="32.0" prefWidth="144.0" style="-fx-border-color: #808080;">
+                     <children>
+                        <CheckBox fx:id="checkTrue" disable="true" layoutX="14.0" layoutY="6.0" mnemonicParsing="false" onAction="#verifyFieldsPrimaryOfBool" text="Sim" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="checkFalse" disable="true" selected="true" layoutX="78.0" layoutY="6.0" mnemonicParsing="false" onAction="#verifyFieldsSecondaryOfBool" text="Não" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </Pane>
+                  <Label fx:id="lblCnpj" layoutX="14.0" layoutY="61.0" text="C.N.P.J">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <NumberTextField fx:id="txtCnpj" disable="true" layoutX="66.0" layoutY="59.0" prefHeight="30.0" prefWidth="171.0" promptText="__.___.___/____-__">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </NumberTextField>
+                  <Label fx:id="lblLogradouro" layoutX="260.0" layoutY="63.0" text="Logradouro">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtLogradouro" layoutX="345.0" layoutY="62.0" prefHeight="30.0" prefWidth="394.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lblNumero" layoutX="762.0" layoutY="64.0" text="Número">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <NumberTextField fx:id="txtNumero" layoutX="824.0" layoutY="58.0" prefHeight="30.0" prefWidth="91.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </NumberTextField>
+                  <Label fx:id="lblComplemento" layoutX="947.0" layoutY="63.0" text="Complemento">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtComplemento" layoutX="1040.0" layoutY="59.0" prefHeight="25.0" prefWidth="77.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lblBairro" layoutX="14.0" layoutY="114.0" text="Bairro">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtBairro" layoutX="66.0" layoutY="109.0" prefHeight="25.0" prefWidth="171.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lblCep" layoutX="260.0" layoutY="116.0" text="CEP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <NumberTextField fx:id="txtCep" layoutX="294.0" layoutY="109.0" prefHeight="30.0" prefWidth="103.0" promptText="_____-___">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </NumberTextField>
+                  <Label fx:id="lblTelefone" layoutX="414.0" layoutY="114.0" text="Telefone">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <NumberTextField fx:id="txtTelefone" layoutX="480.0" layoutY="109.0" prefHeight="30.0" prefWidth="103.0" promptText="____-____">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </NumberTextField>
+                  <Label fx:id="lblCelular" layoutX="608.0" layoutY="114.0" text="Celular">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <NumberTextField fx:id="txtCelular" layoutX="665.0" layoutY="109.0" prefHeight="30.0" prefWidth="103.0" promptText="9____-____">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </NumberTextField>
+                  <Label fx:id="lblEmail" layoutX="796.0" layoutY="114.0" text="Email">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtEmail" layoutX="842.0" layoutY="109.0" prefHeight="30.0" prefWidth="276.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Pane layoutX="14.0" layoutY="169.0" prefHeight="44.0" prefWidth="200.0" style="-fx-border-color: #808080;">
+                     <children>
+                        <Text boundsType="VISUAL" layoutX="14.0" layoutY="6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" text="Sexo">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Text>
+                        <CheckBox fx:id="checkMasculino" selected="true" onAction="#verifyFieldsPrimaryOfGenero" layoutX="14.0" layoutY="17.0" mnemonicParsing="false" text="Masculino">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                        <CheckBox fx:id="checkFeminino"  onAction="#verifyFieldsSecondaryOfGenero" layoutX="112.0" layoutY="17.0" mnemonicParsing="false" text="Feminino">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </Pane>
+                  <Label fx:id="lblDataDeNascimento" layoutX="240.0" layoutY="181.0" text="Data de Nascimento">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="datePickerDataDeNascimento" disable="false" layoutX="380.0" layoutY="179.0" prefHeight="30.0" prefWidth="187.0" promptText="__/__/____" />
+                  <Label fx:id="lblDataCadastro" layoutX="597.0" layoutY="181.0" text="Data de Cadastro">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="datePickerDataCadastro" layoutX="719.0" layoutY="179.0" prefHeight="30.0" prefWidth="187.0" promptText="__/__/____" />
+                  <Label fx:id="lblFidelidade" layoutX="927.0" layoutY="182.0" text="Fidelidade">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtFidelidade" disable="true" layoutX="1002.0" layoutY="178.0" prefHeight="25.0" prefWidth="116.0" style="-fx-border-color: #808080;" />
+                  <Button fx:id="btnSalvar" onAction="#realizeTheRegistration" layoutX="265.0" layoutY="260.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="161.0" text="Salvar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnCancelar" layoutX="682.0" layoutY="260.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="161.0" text="Cancelar">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</VBox>
